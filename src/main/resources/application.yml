@@ -1,1 +1,13 @@
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mysql://localhost:3307/db_to_do_list?useUnicode=yes&characterEncoding=UTF-8&useTimezone=true&serverTimezone=America/Sao_Paulo
+    username: todolist
+    password: todolist
+
+  flyway:
+    url: jdbc:mysql://localhost:3307/db_to_do_list?useUnicode=yes&characterEncoding=UTF-8&useTimezone=true&serverTimezone=America/Sao_Paulo
+    username: todolist
+    password: todolist
+
 
