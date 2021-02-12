@@ -9,12 +9,6 @@ public class UserEntity {
     private String lastName;
     private List<TaskEntity> taskEntityList;
 
-    public UserEntity(String firstName, String lastName, List<TaskEntity> taskEntityList) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.taskEntityList = taskEntityList;
-    }
-
     public Long getId() {
         return id;
     }

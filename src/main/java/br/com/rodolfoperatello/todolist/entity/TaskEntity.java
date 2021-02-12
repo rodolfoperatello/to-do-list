@@ -10,13 +10,6 @@ public class TaskEntity {
     private LocalDateTime localDateTime;
     private UserEntity userEntity;
 
-    public TaskEntity(String description, String tag, LocalDateTime localDateTime, UserEntity userEntity) {
-        this.description = description;
-        this.tag = tag;
-        this.localDateTime = localDateTime;
-        this.userEntity = userEntity;
-    }
-
     public Long getId() {
         return id;
     }
@@ -64,6 +57,7 @@ public class TaskEntity {
                 ", description='" + description + '\'' +
                 ", tag='" + tag + '\'' +
                 ", localDateTime=" + localDateTime +
+                ", userEntity=" + userEntity +
                 '}';
     }
 }
