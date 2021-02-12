@@ -1,13 +1,21 @@
 package br.com.rodolfoperatello.todolist.entity;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "task")
 public class TaskEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
     private String tag;
+    @Column(name = "date")
     private LocalDateTime localDateTime;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
     public Long getId() {
