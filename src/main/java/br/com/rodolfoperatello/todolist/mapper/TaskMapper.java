@@ -5,14 +5,19 @@ import br.com.rodolfoperatello.todolist.controller.response.TaskResponse;
 import br.com.rodolfoperatello.todolist.entity.TaskEntity;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 @Component
 public class TaskMapper {
+
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public static TaskEntity requestToEntity(TaskRequest taskRequest) {
         TaskEntity taskEntity = new TaskEntity();
         taskEntity.setDescription(taskRequest.getDescription());
         taskEntity.setTag(taskRequest.getDescription());
-        taskEntity.setLocalDateTime(taskRequest.getDate());
+        taskEntity.setLocalDateTime(LocalDateTime.parse(taskRequest.getDate(), formatter));
         return taskEntity;
     }
 
