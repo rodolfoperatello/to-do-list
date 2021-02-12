@@ -12,7 +12,7 @@ public class TaskRequest {
     @NotBlank(message = "Tag cannot be null or blank")
     private String tag;
     @NotNull(message = "Date cannot be null")
-    private LocalDateTime date;
+    private String date;
     @NotBlank(message = "User ID cannot be null or blank")
     @Min(value = 1, message = "Id cannot be less then one")
     private Long userId;
@@ -33,11 +33,11 @@ public class TaskRequest {
         this.tag = tag;
     }
 
-    public LocalDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
